@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.1">
+ <persistence-unit name="bibliotecaPU" transaction-type="RESOURCE_LOCAL">
+  <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+  <class>es.ejemplo.biblioteca.orm.entity.SocioEntity</class>
+  <class>es.ejemplo.biblioteca.orm.entity.AutorEntity</class>
+  <class>es.ejemplo.biblioteca.orm.entity.LibroEntity</class>
+  <class>es.ejemplo.biblioteca.orm.entity.PrestamoEntity</class>
+  <class>es.ejemplo.biblioteca.orm.entity.ReservaEntity</class>
+  <properties>
+   <property name="jakarta.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
+   <property name="hibernate.dialect" value="org.hibernate.community.dialect.SQLiteDialect"/>
+   <property name="hibernate.hbm2ddl.auto" value="none"/>
+   <property name="hibernate.show_sql" value="false"/>
+  </properties>
+ </persistence-unit>
+</persistence>
