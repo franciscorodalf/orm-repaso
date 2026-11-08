@@ -1,10 +1,8 @@
 package es.ejemplo.biblioteca.dao;
 
 import es.ejemplo.biblioteca.modelo.Libro;
-import es.ejemplo.biblioteca.orm.mapper.AutorMapper;
 import es.ejemplo.biblioteca.orm.mapper.LibroMapper;
 import es.ejemplo.biblioteca.orm.config.OrmFactory;
-import es.ejemplo.biblioteca.orm.entity.AutorEntity;
 import es.ejemplo.biblioteca.orm.entity.LibroEntity;
 import jakarta.persistence.EntityManagerFactory;
 import java.util.List;
