@@ -178,22 +178,82 @@ public class SocioDao implements AutoCloseable {
     }
 
     public List<Socio> listarConPrestamosVencidos(String fecha) {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        if (fecha == null || fecha.isBlank()) {
+            return List.of();
+        }
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT socio FROM SocioEntity socio WHERE EXISTS ("
+                                    + "SELECT p FROM PrestamoEntity p WHERE p.socio = socio "
+                                    + "AND p.fechaDevolucion IS NULL AND p.fechaLimite < :fecha) "
+                                    + "ORDER BY socio.nombre",
+                            SocioEntity.class)
+                    .setParameter("fecha", fecha)
+                    .getResultStream().map(SocioMapper::toDomain).toList();
+
+        } catch (RuntimeException e) {
+            registrar("listar socios con prestamos vencidos", e);
+        }
         return List.of();
     }
 
     public List<Socio> sociosSinPrestamos() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT socio FROM SocioEntity socio WHERE NOT EXISTS ("
+                                    + "SELECT p FROM PrestamoEntity p WHERE p.socio = socio) "
+                                    + "ORDER BY socio.nombre",
+                            SocioEntity.class)
+                    .getResultStream().map(SocioMapper::toDomain).toList();
+
+        } catch (RuntimeException e) {
+            registrar("listar socios sin prestamos", e);
+        }
         return List.of();
     }
 
     public List<Object[]> rankingSocios(int limite) {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        if (limite <= 0) {
+            return List.of();
+        }
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT socio.idSocio, socio.nombre, COUNT(p) FROM PrestamoEntity p JOIN p.socio socio "
+                                    + "GROUP BY socio.idSocio, socio.nombre "
+                                    + "ORDER BY COUNT(p) DESC, socio.nombre",
+                            Object[].class)
+                    .setMaxResults(limite)
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("ranking de socios", e);
+        }
         return List.of();
     }
 
     public List<Object[]> historialSocio(int idSocio) {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        if (idSocio <= 0) {
+            return List.of();
+        }
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT p.idPrestamo, libro.titulo, p.fechaPrestamo, p.fechaLimite, p.fechaDevolucion, "
+                                    + "CASE WHEN p.fechaDevolucion IS NULL THEN 'PENDIENTE' "
+                                    + "WHEN p.fechaDevolucion > p.fechaLimite THEN 'DEVUELTO CON RETRASO' "
+                                    + "ELSE 'DEVUELTO EN PLAZO' END "
+                                    + "FROM PrestamoEntity p JOIN p.libro libro "
+                                    + "WHERE p.idSocio = :idSocio ORDER BY p.fechaPrestamo",
+                            Object[].class)
+                    .setParameter("idSocio", idSocio)
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("historial de socio", e);
+        }
         return List.of();
     }
 

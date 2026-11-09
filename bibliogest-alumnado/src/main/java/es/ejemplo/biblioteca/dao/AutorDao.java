@@ -174,30 +174,52 @@ public class AutorDao implements AutoCloseable {
     }
 
     public long contarLibrosPorAutor(int idAutor) {
-        if (idAutor < 0) {
+        if (idAutor <= 0) {
             return 0;
         }
         try (var entityManager = managerFactory.createEntityManager()) {
             return entityManager
                     .createQuery(
-                            "SELECT COUNT(libro) from LibroEntity libro where libro.autor = :id",
-                            AutorEntity.class)
-                    .setParameter("id", idAutor)
-                    .getResultStream().map(AutorMapper::toDomain).count();
+                            "SELECT COUNT(libro) FROM LibroEntity libro WHERE libro.idAutor = :idAutor",
+                            Long.class)
+                    .setParameter("idAutor", idAutor)
+                    .getSingleResult();
 
         } catch (RuntimeException e) {
-            registrar("buscar nacionalidad de autor", e);
+            registrar("contar libros por autor", e);
         }
         return 0;
     }
 
     public List<Object[]> autoresConRecuento() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT autor.idAutor, autor.nombre, COUNT(libro) FROM AutorEntity autor "
+                                    + "LEFT JOIN LibroEntity libro ON libro.autor = autor "
+                                    + "GROUP BY autor.idAutor, autor.nombre ORDER BY autor.nombre",
+                            Object[].class)
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("autores con recuento de libros", e);
+        }
         return List.of();
     }
 
     public List<Autor> autoresLeidosPorTresSocios() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT autor FROM AutorEntity autor WHERE ("
+                                    + "SELECT COUNT(DISTINCT p.idSocio) FROM PrestamoEntity p JOIN p.libro libro "
+                                    + "WHERE libro.autor = autor) >= 3 ORDER BY autor.nombre",
+                            AutorEntity.class)
+                    .getResultStream().map(AutorMapper::toDomain).toList();
+
+        } catch (RuntimeException e) {
+            registrar("autores leidos por tres socios", e);
+        }
         return List.of();
     }
 

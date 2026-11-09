@@ -216,12 +216,39 @@ public class ReservaDao implements AutoCloseable {
     }
 
     public List<Object[]> reservasConDetalles() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT r.idReserva, socio.nombre, libro.titulo, autor.nombre, r.fechaReserva "
+                                    + "FROM ReservaEntity r JOIN r.socio socio JOIN r.libro libro JOIN libro.autor autor "
+                                    + "WHERE r.estado = :estado ORDER BY r.fechaReserva",
+                            Object[].class)
+                    .setParameter("estado", "PENDIENTE")
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("reservas con detalles", e);
+        }
         return List.of();
     }
 
     public List<Object[]> prioridadReservas() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT libro.idLibro, libro.titulo, r.idReserva, socio.nombre, r.fechaReserva "
+                                    + "FROM ReservaEntity r JOIN r.libro libro JOIN r.socio socio "
+                                    + "WHERE r.estado = :estado AND r.fechaReserva = ("
+                                    + "SELECT MIN(r2.fechaReserva) FROM ReservaEntity r2 "
+                                    + "WHERE r2.idLibro = r.idLibro AND r2.estado = :estado) "
+                                    + "ORDER BY r.fechaReserva",
+                            Object[].class)
+                    .setParameter("estado", "PENDIENTE")
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("prioridad de reservas", e);
+        }
         return List.of();
     }
 

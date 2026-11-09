@@ -215,17 +215,59 @@ public class PrestamoDao implements AutoCloseable {
     }
 
     public long contarPrestamosPorLibro(int idLibro) {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        if (idLibro <= 0) {
+            return 0;
+        }
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT COUNT(p) FROM PrestamoEntity p WHERE p.idLibro = :idLibro",
+                            Long.class)
+                    .setParameter("idLibro", idLibro)
+                    .getSingleResult();
+
+        } catch (RuntimeException e) {
+            registrar("contar prestamos por libro", e);
+        }
         return 0;
     }
 
     public List<Object[]> prestamosConSocioYLibro() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT p.idPrestamo, socio.nombre, libro.titulo, p.fechaPrestamo, p.fechaLimite, p.fechaDevolucion "
+                                    + "FROM PrestamoEntity p JOIN p.socio socio JOIN p.libro libro "
+                                    + "ORDER BY p.fechaPrestamo",
+                            Object[].class)
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("prestamos con socio y libro", e);
+        }
         return List.of();
     }
 
     public List<Object[]> rankingMensual(String anioMes, int limite) {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        if (anioMes == null || anioMes.isBlank() || limite <= 0) {
+            return List.of();
+        }
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT libro.titulo, autor.nombre, COUNT(p) "
+                                    + "FROM PrestamoEntity p JOIN p.libro libro JOIN libro.autor autor "
+                                    + "WHERE p.fechaPrestamo LIKE :mes "
+                                    + "GROUP BY libro.idLibro, libro.titulo, autor.nombre "
+                                    + "ORDER BY COUNT(p) DESC, libro.titulo",
+                            Object[].class)
+                    .setParameter("mes", anioMes + "%")
+                    .setMaxResults(limite)
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("ranking mensual de prestamos", e);
+        }
         return List.of();
     }
 
@@ -278,8 +320,30 @@ public class PrestamoDao implements AutoCloseable {
     }
 
     public int devolver(int id, String fecha) {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
-        return 0;
+        if (id <= 0 || fecha == null || fecha.isBlank()) {
+            return 0;
+        }
+        try (var entityManager = managerFactory.createEntityManager()) {
+            var tx = entityManager.getTransaction();
+            try {
+                tx.begin();
+                PrestamoEntity prestamo = entityManager.find(PrestamoEntity.class, id);
+                if (prestamo == null || prestamo.getFechaDevolucion() != null
+                        || fecha.compareTo(prestamo.getFechaPrestamo()) < 0) {
+                    tx.rollback();
+                    return 0;
+                }
+                prestamo.setFechaDevolucion(fecha);
+                tx.commit();
+                return 1;
+            } catch (RuntimeException e) {
+                if (tx.isActive()) {
+                    tx.rollback();
+                }
+                registrar("devolver prestamo", e);
+            }
+            return 0;
+        }
     }
 
     @Override

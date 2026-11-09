@@ -197,13 +197,13 @@ public class LibroDao implements AutoCloseable {
         try (var entityManager = managerFactory.createEntityManager()) {
             return entityManager
                     .createQuery(
-                            "SELECT libro from LibroEntity libro where libro.titulo = :titulo order by libro.titulo",
+                            "SELECT libro FROM LibroEntity libro WHERE LOWER(libro.titulo) LIKE :texto ORDER BY libro.titulo",
                             LibroEntity.class)
-                    .setParameter("titulo", texto)
+                    .setParameter("texto", "%" + texto.toLowerCase() + "%")
                     .getResultStream().map(LibroMapper::toDomain).toList();
 
         } catch (RuntimeException e) {
-            registrar("buscar autor de libro", e);
+            registrar("buscar libro por titulo", e);
         }
         return List.of();
     }
@@ -224,52 +224,184 @@ public class LibroDao implements AutoCloseable {
     }
 
     public List<Libro> librosDesdeAnio(int anio, String genero) {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        if (genero == null || genero.isBlank()) {
+            return List.of();
+        }
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT libro FROM LibroEntity libro "
+                                    + "WHERE libro.anioPublicacion >= :anio AND libro.genero = :genero "
+                                    + "ORDER BY libro.anioPublicacion, libro.titulo",
+                            LibroEntity.class)
+                    .setParameter("anio", anio)
+                    .setParameter("genero", genero)
+                    .getResultStream().map(LibroMapper::toDomain).toList();
+
+        } catch (RuntimeException e) {
+            registrar("libros desde anio", e);
+        }
         return List.of();
     }
 
     public List<String> generos() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT DISTINCT libro.genero FROM LibroEntity libro ORDER BY libro.genero",
+                            String.class)
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("listar generos", e);
+        }
         return List.of();
     }
 
     public List<Libro> nuncaPrestados() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT libro FROM LibroEntity libro WHERE NOT EXISTS ("
+                                    + "SELECT p FROM PrestamoEntity p WHERE p.libro = libro) "
+                                    + "ORDER BY libro.titulo",
+                            LibroEntity.class)
+                    .getResultStream().map(LibroMapper::toDomain).toList();
+
+        } catch (RuntimeException e) {
+            registrar("libros nunca prestados", e);
+        }
         return List.of();
     }
 
     public List<Libro> masPrestadosQueMedia() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            Long totalLibros = entityManager
+                    .createQuery("SELECT COUNT(libro) FROM LibroEntity libro", Long.class)
+                    .getSingleResult();
+            if (totalLibros == 0) {
+                return List.of();
+            }
+            Long totalPrestamos = entityManager
+                    .createQuery("SELECT COUNT(prestamo) FROM PrestamoEntity prestamo", Long.class)
+                    .getSingleResult();
+            return entityManager
+                    .createQuery(
+                            "SELECT libro FROM LibroEntity libro "
+                                    + "WHERE (SELECT COUNT(p) FROM PrestamoEntity p WHERE p.libro = libro) * :totalLibros "
+                                    + "> :totalPrestamos ORDER BY libro.titulo",
+                            LibroEntity.class)
+                    .setParameter("totalLibros", totalLibros)
+                    .setParameter("totalPrestamos", totalPrestamos)
+                    .getResultStream().map(LibroMapper::toDomain).toList();
+
+        } catch (RuntimeException e) {
+            registrar("libros mas prestados que la media", e);
+        }
         return List.of();
     }
 
     public List<Libro> reservadosSinDisponibilidad() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT libro FROM LibroEntity libro WHERE EXISTS ("
+                                    + "SELECT r FROM ReservaEntity r WHERE r.libro = libro AND r.estado = :estado) "
+                                    + "AND libro.ejemplares <= (SELECT COUNT(p) FROM PrestamoEntity p "
+                                    + "WHERE p.libro = libro AND p.fechaDevolucion IS NULL) "
+                                    + "ORDER BY libro.titulo",
+                            LibroEntity.class)
+                    .setParameter("estado", "PENDIENTE")
+                    .getResultStream().map(LibroMapper::toDomain).toList();
+
+        } catch (RuntimeException e) {
+            registrar("libros reservados sin disponibilidad", e);
+        }
         return List.of();
     }
 
     public List<Object[]> librosConAutor() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT libro.titulo, autor.nombre, autor.nacionalidad "
+                                    + "FROM LibroEntity libro JOIN libro.autor autor ORDER BY libro.titulo",
+                            Object[].class)
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("libros con autor", e);
+        }
         return List.of();
     }
 
     public List<Object[]> contarPorGenero() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT libro.genero, COUNT(libro) FROM LibroEntity libro "
+                                    + "GROUP BY libro.genero ORDER BY libro.genero",
+                            Object[].class)
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("contar libros por genero", e);
+        }
         return List.of();
     }
 
     public List<Object[]> prestamosPorGeneroMinimo(long minimo) {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        if (minimo < 0) {
+            return List.of();
+        }
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT libro.genero, COUNT(p) FROM PrestamoEntity p JOIN p.libro libro "
+                                    + "GROUP BY libro.genero HAVING COUNT(p) > :minimo "
+                                    + "ORDER BY COUNT(p) DESC",
+                            Object[].class)
+                    .setParameter("minimo", minimo)
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("prestamos por genero minimo", e);
+        }
         return List.of();
     }
 
     public List<Object[]> disponibilidadPorLibro() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT libro.idLibro, libro.titulo, libro.ejemplares, COUNT(p), libro.ejemplares - COUNT(p) "
+                                    + "FROM LibroEntity libro LEFT JOIN PrestamoEntity p "
+                                    + "ON p.libro = libro AND p.fechaDevolucion IS NULL "
+                                    + "GROUP BY libro.idLibro, libro.titulo, libro.ejemplares ORDER BY libro.titulo",
+                            Object[].class)
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("disponibilidad por libro", e);
+        }
         return List.of();
     }
 
     public List<Object[]> estadisticasGenero() {
-        // TODO: implementar con EntityManager, JPQL y rollback cuando proceda.
+        try (var entityManager = managerFactory.createEntityManager()) {
+            return entityManager
+                    .createQuery(
+                            "SELECT libro.genero, COUNT(libro), SUM(libro.ejemplares), "
+                                    + "(SELECT COUNT(p) FROM PrestamoEntity p WHERE p.libro.genero = libro.genero), "
+                                    + "(SELECT COUNT(p2) FROM PrestamoEntity p2 WHERE p2.libro.genero = libro.genero "
+                                    + "AND p2.fechaDevolucion IS NULL) "
+                                    + "FROM LibroEntity libro GROUP BY libro.genero ORDER BY libro.genero",
+                            Object[].class)
+                    .getResultList();
+
+        } catch (RuntimeException e) {
+            registrar("estadisticas por genero", e);
+        }
         return List.of();
     }
 
