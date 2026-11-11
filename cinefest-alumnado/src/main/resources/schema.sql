@@ -1,0 +1,47 @@
+PRAGMA foreign_keys = ON;
+CREATE TABLE IF NOT EXISTS sedes (
+ id_sede INTEGER PRIMARY KEY AUTOINCREMENT,
+ nombre TEXT NOT NULL UNIQUE, municipio TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS salas (
+ id_sala INTEGER PRIMARY KEY AUTOINCREMENT,
+ nombre TEXT NOT NULL, aforo INTEGER NOT NULL CHECK (aforo > 0),
+ id_sede INTEGER NOT NULL REFERENCES sedes(id_sede) ON DELETE RESTRICT,
+ UNIQUE(id_sede,nombre)
+);
+CREATE TABLE IF NOT EXISTS peliculas (
+ id_pelicula INTEGER PRIMARY KEY AUTOINCREMENT,
+ titulo TEXT NOT NULL, genero TEXT NOT NULL,
+ duracion_min INTEGER NOT NULL CHECK (duracion_min > 0),
+ pais TEXT NOT NULL, anio INTEGER NOT NULL
+);
+CREATE TABLE IF NOT EXISTS sesiones (
+ id_sesion INTEGER PRIMARY KEY AUTOINCREMENT,
+ id_pelicula INTEGER NOT NULL REFERENCES peliculas(id_pelicula) ON DELETE RESTRICT,
+ id_sala INTEGER NOT NULL REFERENCES salas(id_sala) ON DELETE RESTRICT,
+ fecha TEXT NOT NULL, hora TEXT NOT NULL,
+ precio REAL NOT NULL CHECK (precio >= 0),
+ estado TEXT NOT NULL DEFAULT 'PROGRAMADA' CHECK (estado IN ('PROGRAMADA','CANCELADA','FINALIZADA')),
+ UNIQUE(id_sala,fecha,hora)
+);
+CREATE TABLE IF NOT EXISTS espectadores (
+ id_espectador INTEGER PRIMARY KEY AUTOINCREMENT,
+ nombre TEXT NOT NULL, email TEXT NOT NULL UNIQUE,
+ fecha_alta TEXT NOT NULL, activo INTEGER NOT NULL DEFAULT 1 CHECK (activo IN (0,1))
+);
+CREATE TABLE IF NOT EXISTS entradas (
+ id_entrada INTEGER PRIMARY KEY AUTOINCREMENT,
+ id_sesion INTEGER NOT NULL REFERENCES sesiones(id_sesion) ON DELETE RESTRICT,
+ id_espectador INTEGER NOT NULL REFERENCES espectadores(id_espectador) ON DELETE RESTRICT,
+ fecha_compra TEXT NOT NULL,
+ estado TEXT NOT NULL DEFAULT 'PAGADA' CHECK (estado IN ('PAGADA','USADA','CANCELADA')),
+ UNIQUE(id_sesion,id_espectador)
+);
+CREATE TABLE IF NOT EXISTS valoraciones (
+ id_valoracion INTEGER PRIMARY KEY AUTOINCREMENT,
+ id_pelicula INTEGER NOT NULL REFERENCES peliculas(id_pelicula) ON DELETE RESTRICT,
+ id_espectador INTEGER NOT NULL REFERENCES espectadores(id_espectador) ON DELETE RESTRICT,
+ puntuacion INTEGER NOT NULL CHECK (puntuacion BETWEEN 1 AND 5),
+ comentario TEXT, fecha TEXT NOT NULL,
+ UNIQUE(id_pelicula,id_espectador)
+);
