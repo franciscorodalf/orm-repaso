@@ -1,0 +1,158 @@
+# SportRent — calificación automática
+
+## Funcionalidad (8 puntos)
+| Grupo | Aciertos | Puntos | Máximo |
+|---|---:|---:|---:|
+| A01ClienteDaoTest | 0/20 | 0.000 | 1.40 |
+| A02EquipoDaoTest | 0/20 | 0.000 | 1.40 |
+| A03AlquilerDaoTest | 0/25 | 0.000 | 1.70 |
+| B01ConsultasBasicasTest | 0/12 | 0.000 | 0.75 |
+| B02ConsultasIntermediasTest | 0/20 | 0.000 | 1.25 |
+| B03ConsultasAvanzadasTest | 0/23 | 0.000 | 1.50 |
+
+**Funcionalidad: 0.000/8.00**
+
+## Calidad (1 punto)
+| Herramienta | Incidencias | Nota |
+|---|---:|---:|
+| Checkstyle | 0 | 0.300/0.30 |
+| PMD | 0 | 0.450/0.45 |
+| CPD | 0 | 0.250/0.25 |
+
+**Calidad: 0.000/1.00**
+
+## Javadoc (1 punto; umbral 6.40/8)
+Potencial: 0.100; umbral: NO SUPERADO; aplicado: 0.000
+Javadoc HTML: sí
+
+- clases: 0/3
+- métodos: 0/24
+- @param: 0/13
+- @return: 0/24
+
+## NOTA FINAL: 0.00/10
+
+## Incidencias
+- A03AlquilerDaoTest.verificarListadoOrdenado fallida
+- A03AlquilerDaoTest.verificarTipoElementosListado fallida
+- A03AlquilerDaoTest.verificarBusquedaRegistroExistente fallida
+- A03AlquilerDaoTest.verificarBusquedaRegistroInexistente fallida
+- A03AlquilerDaoTest.verificarInsercionRegistro fallida
+- A03AlquilerDaoTest.verificarDisponibilidadEnInsercion fallida
+- A03AlquilerDaoTest.verificarActualizacionRegistro fallida
+- A03AlquilerDaoTest.verificarActualizacionRegistroInexistente fallida
+- A03AlquilerDaoTest.verificarEliminacionRegistro fallida
+- A03AlquilerDaoTest.verificarEliminacionRegistroInexistente fallida
+- A03AlquilerDaoTest.verificarListadoSinRegistros fallida
+- A03AlquilerDaoTest.verificarBusquedaConIdentificadorNulo fallida
+- A03AlquilerDaoTest.verificarInsercionConModeloNulo fallida
+- A03AlquilerDaoTest.verificarActualizacionConModeloNulo fallida
+- A03AlquilerDaoTest.verificarEliminacionConIdentificadorNulo fallida
+- A03AlquilerDaoTest.verificarIntervaloDeFechas fallida
+- A03AlquilerDaoTest.verificarClienteRelacionado fallida
+- A03AlquilerDaoTest.verificarEquipoRelacionado fallida
+- A03AlquilerDaoTest.verificarRelacionEquipoDevuelto fallida
+- A03AlquilerDaoTest.verificarPersistenciaFechas fallida
+- A03AlquilerDaoTest.verificarActualizacionConRelacionInvalida fallida
+- A03AlquilerDaoTest.verificarInsercionConRelacionesInvalidas fallida
+- A03AlquilerDaoTest.verificarIndependenciaEliminacion fallida
+- A03AlquilerDaoTest.verificarListadoEnNuevaSesion fallida
+- A03AlquilerDaoTest.verificarIntegridadTrasInsercionRechazada fallida
+- A01ClienteDaoTest.verificarListadoOrdenado fallida
+- A01ClienteDaoTest.verificarTipoElementosListado fallida
+- A01ClienteDaoTest.verificarBusquedaRegistroExistente fallida
+- A01ClienteDaoTest.verificarBusquedaRegistroInexistente fallida
+- A01ClienteDaoTest.verificarInsercionRegistro fallida
+- A01ClienteDaoTest.verificarInsercionRegistroDuplicado fallida
+- A01ClienteDaoTest.verificarActualizacionRegistro fallida
+- A01ClienteDaoTest.verificarActualizacionRegistroInexistente fallida
+- A01ClienteDaoTest.verificarEliminacionRegistro fallida
+- A01ClienteDaoTest.verificarEliminacionRegistroInexistente fallida
+- A01ClienteDaoTest.verificarListadoSinRegistros fallida
+- A01ClienteDaoTest.verificarBusquedaConIdentificadorNulo fallida
+- A01ClienteDaoTest.verificarInsercionConModeloNulo fallida
+- A01ClienteDaoTest.verificarActualizacionConModeloNulo fallida
+- A01ClienteDaoTest.verificarEliminacionConIdentificadorNulo fallida
+- A01ClienteDaoTest.verificarIdentificadorVacio fallida
+- A01ClienteDaoTest.verificarIdentificadorEnInsercion fallida
+- A01ClienteDaoTest.verificarValidacionAtributos fallida
+- A01ClienteDaoTest.verificarIntegridadReferencial fallida
+- A01ClienteDaoTest.verificarConservacionDatosTrasDuplicado fallida
+- A02EquipoDaoTest.verificarListadoOrdenado fallida
+- A02EquipoDaoTest.verificarTipoElementosListado fallida
+- A02EquipoDaoTest.verificarBusquedaRegistroExistente fallida
+- A02EquipoDaoTest.verificarBusquedaRegistroInexistente fallida
+- A02EquipoDaoTest.verificarInsercionRegistro fallida
+- A02EquipoDaoTest.verificarInsercionRegistroDuplicado fallida
+- A02EquipoDaoTest.verificarActualizacionRegistro fallida
+- A02EquipoDaoTest.verificarActualizacionRegistroInexistente fallida
+- A02EquipoDaoTest.verificarEliminacionRegistro fallida
+- A02EquipoDaoTest.verificarEliminacionRegistroInexistente fallida
+- A02EquipoDaoTest.verificarListadoSinRegistros fallida
+- A02EquipoDaoTest.verificarBusquedaConIdentificadorNulo fallida
+- A02EquipoDaoTest.verificarInsercionConModeloNulo fallida
+- A02EquipoDaoTest.verificarActualizacionConModeloNulo fallida
+- A02EquipoDaoTest.verificarEliminacionConIdentificadorNulo fallida
+- A02EquipoDaoTest.verificarIdentificadorVacio fallida
+- A02EquipoDaoTest.verificarIdentificadorEnInsercion fallida
+- A02EquipoDaoTest.verificarValidacionAtributos fallida
+- A02EquipoDaoTest.verificarIntegridadReferencial fallida
+- A02EquipoDaoTest.verificarConservacionDatosTrasDuplicado fallida
+- B03ConsultasAvanzadasTest.verificarResultadoClientesSuperanReferencia fallida
+- B03ConsultasAvanzadasTest.verificarOrdenacionClientesSuperanReferencia fallida
+- B03ConsultasAvanzadasTest.verificarImplementacionClientesSuperanReferencia fallida
+- B03ConsultasAvanzadasTest.verificarResultadoVacioClientesSuperanReferencia fallida
+- B03ConsultasAvanzadasTest.verificarSegundoClienteClientesSuperanReferencia fallida
+- B03ConsultasAvanzadasTest.verificarCantidadPrimerClienteClientesSuperanReferencia fallida
+- B03ConsultasAvanzadasTest.verificarCantidadSegundoClienteClientesSuperanReferencia fallida
+- B03ConsultasAvanzadasTest.verificarReferenciaInexistenteClientesSuperanReferencia fallida
+- B03ConsultasAvanzadasTest.verificarReferenciaNulaClientesSuperanReferencia fallida
+- B03ConsultasAvanzadasTest.verificarReferenciaConUnAlquilerClientesSuperanReferencia fallida
+- B03ConsultasAvanzadasTest.verificarReferenciaSinAlquileresClientesSuperanReferencia fallida
+- B03ConsultasAvanzadasTest.verificarReferenciaConMayorCantidadClientesSuperanReferencia fallida
+- B03ConsultasAvanzadasTest.verificarResultadoEquiposSobreMediaCategoria fallida
+- B03ConsultasAvanzadasTest.verificarOrdenacionEquiposSobreMediaCategoria fallida
+- B03ConsultasAvanzadasTest.verificarImplementacionEquiposSobreMediaCategoria fallida
+- B03ConsultasAvanzadasTest.verificarResultadoVacioEquiposSobreMediaCategoria fallida
+- B03ConsultasAvanzadasTest.verificarSegundoEquipoEquiposSobreMediaCategoria fallida
+- B03ConsultasAvanzadasTest.verificarTercerEquipoEquiposSobreMediaCategoria fallida
+- B03ConsultasAvanzadasTest.verificarComparacionDePreciosEquiposSobreMediaCategoria fallida
+- B03ConsultasAvanzadasTest.verificarCategoriaPrimerEquipoEquiposSobreMediaCategoria fallida
+- B03ConsultasAvanzadasTest.verificarMediasInformadasEquiposSobreMediaCategoria fallida
+- B03ConsultasAvanzadasTest.verificarPrecioPrimerEquipoEquiposSobreMediaCategoria fallida
+- B03ConsultasAvanzadasTest.verificarResultadoEstableEquiposSobreMediaCategoria fallida
+- B01ConsultasBasicasTest.verificarResultadoAlquileresPorCliente fallida
+- B01ConsultasBasicasTest.verificarOrdenacionAlquileresPorCliente fallida
+- B01ConsultasBasicasTest.verificarImplementacionAlquileresPorCliente fallida
+- B01ConsultasBasicasTest.verificarResultadoVacioAlquileresPorCliente fallida
+- B01ConsultasBasicasTest.verificarResultadoCincoEquiposMasCaros fallida
+- B01ConsultasBasicasTest.verificarOrdenacionCincoEquiposMasCaros fallida
+- B01ConsultasBasicasTest.verificarImplementacionCincoEquiposMasCaros fallida
+- B01ConsultasBasicasTest.verificarResultadoVacioCincoEquiposMasCaros fallida
+- B01ConsultasBasicasTest.verificarResultadoAlquileresPendientes fallida
+- B01ConsultasBasicasTest.verificarOrdenacionAlquileresPendientes fallida
+- B01ConsultasBasicasTest.verificarImplementacionAlquileresPendientes fallida
+- B01ConsultasBasicasTest.verificarResultadoVacioAlquileresPendientes fallida
+- B02ConsultasIntermediasTest.verificarResultadoClientesConMasDeDosAlquileres fallida
+- B02ConsultasIntermediasTest.verificarOrdenacionClientesConMasDeDosAlquileres fallida
+- B02ConsultasIntermediasTest.verificarImplementacionClientesConMasDeDosAlquileres fallida
+- B02ConsultasIntermediasTest.verificarResultadoVacioClientesConMasDeDosAlquileres fallida
+- B02ConsultasIntermediasTest.verificarCantidadPrimerClienteClientesConMasDeDosAlquileres fallida
+- B02ConsultasIntermediasTest.verificarResultadoMaximoPrecioPorCategoria fallida
+- B02ConsultasIntermediasTest.verificarOrdenacionMaximoPrecioPorCategoria fallida
+- B02ConsultasIntermediasTest.verificarImplementacionMaximoPrecioPorCategoria fallida
+- B02ConsultasIntermediasTest.verificarResultadoVacioMaximoPrecioPorCategoria fallida
+- B02ConsultasIntermediasTest.verificarSegundaCategoriaMaximoPrecioPorCategoria fallida
+- B02ConsultasIntermediasTest.verificarResultadoEquiposAlquiladosDosVeces fallida
+- B02ConsultasIntermediasTest.verificarOrdenacionEquiposAlquiladosDosVeces fallida
+- B02ConsultasIntermediasTest.verificarImplementacionEquiposAlquiladosDosVeces fallida
+- B02ConsultasIntermediasTest.verificarResultadoVacioEquiposAlquiladosDosVeces fallida
+- B02ConsultasIntermediasTest.verificarCantidadPrimerEquipoEquiposAlquiladosDosVeces fallida
+- B02ConsultasIntermediasTest.verificarResultadoTresEquiposMasIngresos fallida
+- B02ConsultasIntermediasTest.verificarOrdenacionTresEquiposMasIngresos fallida
+- B02ConsultasIntermediasTest.verificarImplementacionTresEquiposMasIngresos fallida
+- B02ConsultasIntermediasTest.verificarResultadoVacioTresEquiposMasIngresos fallida
+- B02ConsultasIntermediasTest.verificarIngresosPrimerEquipoTresEquiposMasIngresos fallida
+- ClienteDao: no se detecta JPQL
+- EquipoDao: no se detecta JPQL
+- AlquilerDao: no se detecta JPQL

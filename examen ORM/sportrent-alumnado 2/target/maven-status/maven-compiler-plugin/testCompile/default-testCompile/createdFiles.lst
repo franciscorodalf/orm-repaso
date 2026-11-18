@@ -1,0 +1,9 @@
+es/examen/sportrent/test/A03AlquilerDaoTest.class
+es/examen/sportrent/test/config/JpaUtil.class
+es/examen/sportrent/test/B01ConsultasBasicasTest.class
+es/examen/sportrent/test/A01ClienteDaoTest.class
+es/examen/sportrent/test/B03ConsultasAvanzadasTest.class
+es/examen/sportrent/test/BaseTest.class
+es/examen/sportrent/test/A02EquipoDaoTest.class
+es/examen/sportrent/test/B02ConsultasIntermediasTest.class
+es/examen/sportrent/test/config/SqlCapture.class

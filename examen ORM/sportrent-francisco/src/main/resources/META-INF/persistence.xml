@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+  <persistence-unit name="sportrent" transaction-type="RESOURCE_LOCAL">
+    <class>es.examen.sportrent.entity.ClienteEntity</class>
+    <class>es.examen.sportrent.entity.EquipoEntity</class>
+    <class>es.examen.sportrent.entity.AlquilerEntity</class>
+    <properties>
+      <property name="jakarta.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:sqlite:datos/sportrent.db"/>
+      <property name="hibernate.dialect" value="org.hibernate.community.dialect.SQLiteDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="verify"/>
+      <property name="hibernate.show_sql" value="false"/>
+      <property name="hibernate.format_sql" value="false"/>
+    </properties>
+  </persistence-unit>
+</persistence>

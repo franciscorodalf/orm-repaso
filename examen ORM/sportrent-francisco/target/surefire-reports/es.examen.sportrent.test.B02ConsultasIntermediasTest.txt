@@ -1,0 +1,200 @@
+-------------------------------------------------------------------------------
+Test set: es.examen.sportrent.test.B02ConsultasIntermediasTest
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 4, Errors: 16, Skipped: 0, Time elapsed: 0.022 s <<< FAILURE! -- in es.examen.sportrent.test.B02ConsultasIntermediasTest
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoClientesConMasDeDosAlquileres -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesConMasDeDosAlquileres(ClienteDao.java:33)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoClientesConMasDeDosAlquileres(B02ConsultasIntermediasTest.java:28)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarOrdenacionClientesConMasDeDosAlquileres -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesConMasDeDosAlquileres(ClienteDao.java:33)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarOrdenacionClientesConMasDeDosAlquileres(B02ConsultasIntermediasTest.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarImplementacionClientesConMasDeDosAlquileres -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesConMasDeDosAlquileres(ClienteDao.java:33)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarImplementacionClientesConMasDeDosAlquileres(B02ConsultasIntermediasTest.java:46)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoVacioClientesConMasDeDosAlquileres -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoVacioClientesConMasDeDosAlquileres(B02ConsultasIntermediasTest.java:56)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesConMasDeDosAlquileres(ClienteDao.java:33)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.lambda$verificarResultadoVacioClientesConMasDeDosAlquileres$0(B02ConsultasIntermediasTest.java:57)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarCantidadPrimerClienteClientesConMasDeDosAlquileres -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesConMasDeDosAlquileres(ClienteDao.java:33)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarCantidadPrimerClienteClientesConMasDeDosAlquileres(B02ConsultasIntermediasTest.java:67)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoMaximoPrecioPorCategoria -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.maximoPrecioPorCategoria(EquipoDao.java:34)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoMaximoPrecioPorCategoria(B02ConsultasIntermediasTest.java:82)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarOrdenacionMaximoPrecioPorCategoria -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.maximoPrecioPorCategoria(EquipoDao.java:34)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarOrdenacionMaximoPrecioPorCategoria(B02ConsultasIntermediasTest.java:91)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarImplementacionMaximoPrecioPorCategoria -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.maximoPrecioPorCategoria(EquipoDao.java:34)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarImplementacionMaximoPrecioPorCategoria(B02ConsultasIntermediasTest.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoVacioMaximoPrecioPorCategoria -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoVacioMaximoPrecioPorCategoria(B02ConsultasIntermediasTest.java:111)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.maximoPrecioPorCategoria(EquipoDao.java:34)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.lambda$verificarResultadoVacioMaximoPrecioPorCategoria$1(B02ConsultasIntermediasTest.java:112)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarSegundaCategoriaMaximoPrecioPorCategoria -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.maximoPrecioPorCategoria(EquipoDao.java:34)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarSegundaCategoriaMaximoPrecioPorCategoria(B02ConsultasIntermediasTest.java:122)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoEquiposAlquiladosDosVeces -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.equiposAlquiladosDosVeces(AlquilerDao.java:39)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoEquiposAlquiladosDosVeces(B02ConsultasIntermediasTest.java:134)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarOrdenacionEquiposAlquiladosDosVeces -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.equiposAlquiladosDosVeces(AlquilerDao.java:39)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarOrdenacionEquiposAlquiladosDosVeces(B02ConsultasIntermediasTest.java:143)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarImplementacionEquiposAlquiladosDosVeces -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.equiposAlquiladosDosVeces(AlquilerDao.java:39)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarImplementacionEquiposAlquiladosDosVeces(B02ConsultasIntermediasTest.java:152)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoVacioEquiposAlquiladosDosVeces -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoVacioEquiposAlquiladosDosVeces(B02ConsultasIntermediasTest.java:162)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.equiposAlquiladosDosVeces(AlquilerDao.java:39)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.lambda$verificarResultadoVacioEquiposAlquiladosDosVeces$2(B02ConsultasIntermediasTest.java:163)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarCantidadPrimerEquipoEquiposAlquiladosDosVeces -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.equiposAlquiladosDosVeces(AlquilerDao.java:39)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarCantidadPrimerEquipoEquiposAlquiladosDosVeces(B02ConsultasIntermediasTest.java:173)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoTresEquiposMasIngresos -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.tresEquiposMasIngresos(AlquilerDao.java:43)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoTresEquiposMasIngresos(B02ConsultasIntermediasTest.java:188)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarOrdenacionTresEquiposMasIngresos -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.tresEquiposMasIngresos(AlquilerDao.java:43)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarOrdenacionTresEquiposMasIngresos(B02ConsultasIntermediasTest.java:197)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarImplementacionTresEquiposMasIngresos -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.tresEquiposMasIngresos(AlquilerDao.java:43)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarImplementacionTresEquiposMasIngresos(B02ConsultasIntermediasTest.java:206)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoVacioTresEquiposMasIngresos -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarResultadoVacioTresEquiposMasIngresos(B02ConsultasIntermediasTest.java:216)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.tresEquiposMasIngresos(AlquilerDao.java:43)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.lambda$verificarResultadoVacioTresEquiposMasIngresos$3(B02ConsultasIntermediasTest.java:217)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarIngresosPrimerEquipoTresEquiposMasIngresos -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.tresEquiposMasIngresos(AlquilerDao.java:43)
+	at es.examen.sportrent.test.B02ConsultasIntermediasTest.verificarIngresosPrimerEquipoTresEquiposMasIngresos(B02ConsultasIntermediasTest.java:227)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

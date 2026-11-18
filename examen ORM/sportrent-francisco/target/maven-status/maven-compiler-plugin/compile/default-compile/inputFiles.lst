@@ -1,0 +1,17 @@
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/dao/AlquilerDao.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/dao/ClienteDao.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/dao/EquipoDao.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/entity/AlquilerEntity.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/entity/ClienteEntity.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/entity/EquipoEntity.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/mapper/AlquilerMapper.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/mapper/ClienteMapper.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/mapper/EquipoMapper.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/model/Alquiler.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/model/Cliente.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/model/ClienteAlquileres.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/model/Equipo.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/model/EquipoAlquileres.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/model/EquipoIngresos.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/model/EquipoPrecio.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java/es/examen/sportrent/model/PrecioCategoria.java

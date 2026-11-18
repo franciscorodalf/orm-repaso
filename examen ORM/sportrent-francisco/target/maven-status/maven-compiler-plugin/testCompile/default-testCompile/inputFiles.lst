@@ -1,0 +1,9 @@
+/Users/jpexposito/Downloads/sportrent-alumnado/src/test/java/es/examen/sportrent/test/A01ClienteDaoTest.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/test/java/es/examen/sportrent/test/A02EquipoDaoTest.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/test/java/es/examen/sportrent/test/A03AlquilerDaoTest.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/test/java/es/examen/sportrent/test/B01ConsultasBasicasTest.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/test/java/es/examen/sportrent/test/B02ConsultasIntermediasTest.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/test/java/es/examen/sportrent/test/B03ConsultasAvanzadasTest.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/test/java/es/examen/sportrent/test/BaseTest.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/test/java/es/examen/sportrent/test/config/JpaUtil.java
+/Users/jpexposito/Downloads/sportrent-alumnado/src/test/java/es/examen/sportrent/test/config/SqlCapture.java

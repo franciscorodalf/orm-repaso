@@ -1,0 +1,61 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-classpath
+'/Users/jpexposito/.m2/repository/org/hibernate/orm/hibernate-core/7.4.11.Final/hibernate-core-7.4.11.Final.jar:/Users/jpexposito/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.2.0/jakarta.persistence-api-3.2.0.jar:/Users/jpexposito/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/jpexposito/.m2/repository/org/hibernate/orm/hibernate-community-dialects/7.4.11.Final/hibernate-community-dialects-7.4.11.Final.jar:/Users/jpexposito/.m2/repository/org/xerial/sqlite-jdbc/3.46.1.0/sqlite-jdbc-3.46.1.0.jar:/Users/jpexposito/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar'
+-encoding
+'UTF-8'
+-protected
+--release
+21
+-sourcepath
+'/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java:/Users/jpexposito/Downloads/sportrent-alumnado/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'sportrent 1.0.0 API'
+-use
+-version
+-windowtitle
+'sportrent 1.0.0 API'
+es.examen.sportrent.entity
+es.examen.sportrent.dao
+es.examen.sportrent.mapper
+es.examen.sportrent.model
+/Users/jpexposito/.m2/repository/org/hibernate/orm/hibernate-core/7.4.11.Final/hibernate-core-7.4.11.Final.jar = 1790468772000
+/Users/jpexposito/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.2.0/jakarta.persistence-api-3.2.0.jar = 1712739547000
+/Users/jpexposito/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar = 1648723059000
+/Users/jpexposito/.m2/repository/org/hibernate/orm/hibernate-community-dialects/7.4.11.Final/hibernate-community-dialects-7.4.11.Final.jar = 1790468771000
+/Users/jpexposito/.m2/repository/org/xerial/sqlite-jdbc/3.46.1.0/sqlite-jdbc-3.46.1.0.jar = 1724033875000
+/Users/jpexposito/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar = 1644327230000
+/Users/jpexposito/Downloads/sportrent-alumnado/src/main/java = 1794486194065
+/Users/jpexposito/Downloads/sportrent-alumnado/target/generated-sources/annotations = 1794488044883
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/tag-search-index.js = 1794488047949
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/overview-tree.html = 1794488047939
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/module-search-index.js = 1794488047949
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/index.html = 1794488047941
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/package-search-index.js = 1794488047949
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/link.svg = 1794488047963
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/index-all.html = 1794488047956
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/allpackages-index.html = 1794488047948
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/member-search-index.js = 1794488047949
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/copy.svg = 1794488047963
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/script.js = 1794488047962
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/stylesheet.css = 1794488047961
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/search-page.js = 1794488047964
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/overview-summary.html = 1794488047958
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/help-doc.html = 1794488047960
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/element-list = 1794488047912
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/search.html = 1794488047957
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/allclasses-index.html = 1794488047947
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/type-search-index.js = 1794488047949
+/Users/jpexposito/Downloads/sportrent-alumnado/target/reports/apidocs/search.js = 1794488047964

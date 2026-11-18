@@ -1,0 +1,267 @@
+-------------------------------------------------------------------------------
+Test set: es.examen.sportrent.test.A03AlquilerDaoTest
+-------------------------------------------------------------------------------
+Tests run: 25, Failures: 7, Errors: 18, Skipped: 0, Time elapsed: 0.025 s <<< FAILURE! -- in es.examen.sportrent.test.A03AlquilerDaoTest
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarListadoOrdenado -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.listarTodos(AlquilerDao.java:11)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarListadoOrdenado(A03AlquilerDaoTest.java:49)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarTipoElementosListado -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.listarTodos(AlquilerDao.java:11)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarTipoElementosListado(A03AlquilerDaoTest.java:58)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarBusquedaRegistroExistente -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.buscarPorId(AlquilerDao.java:15)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarBusquedaRegistroExistente(A03AlquilerDaoTest.java:69)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarBusquedaRegistroInexistente -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.buscarPorId(AlquilerDao.java:15)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarBusquedaRegistroInexistente(A03AlquilerDaoTest.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarInsercionRegistro -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.insertar(AlquilerDao.java:20)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarInsercionRegistro(A03AlquilerDaoTest.java:97)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarDisponibilidadEnInsercion -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarDisponibilidadEnInsercion(A03AlquilerDaoTest.java:115)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.insertar(AlquilerDao.java:20)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.lambda$verificarDisponibilidadEnInsercion$1(A03AlquilerDaoTest.java:116)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarActualizacionRegistro -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.actualizar(AlquilerDao.java:25)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarActualizacionRegistro(A03AlquilerDaoTest.java:137)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarActualizacionRegistroInexistente -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.actualizar(AlquilerDao.java:25)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarActualizacionRegistroInexistente(A03AlquilerDaoTest.java:158)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarEliminacionRegistro -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.eliminar(AlquilerDao.java:30)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarEliminacionRegistro(A03AlquilerDaoTest.java:170)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarEliminacionRegistroInexistente -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.eliminar(AlquilerDao.java:30)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarEliminacionRegistroInexistente(A03AlquilerDaoTest.java:180)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarListadoSinRegistros -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.listarTodos(AlquilerDao.java:11)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarListadoSinRegistros(A03AlquilerDaoTest.java:194)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarBusquedaConIdentificadorNulo -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarBusquedaConIdentificadorNulo(A03AlquilerDaoTest.java:203)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.buscarPorId(AlquilerDao.java:15)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.lambda$verificarBusquedaConIdentificadorNulo$2(A03AlquilerDaoTest.java:204)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarInsercionConModeloNulo -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarInsercionConModeloNulo(A03AlquilerDaoTest.java:213)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.insertar(AlquilerDao.java:20)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.lambda$verificarInsercionConModeloNulo$3(A03AlquilerDaoTest.java:214)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarActualizacionConModeloNulo -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarActualizacionConModeloNulo(A03AlquilerDaoTest.java:223)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.actualizar(AlquilerDao.java:25)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.lambda$verificarActualizacionConModeloNulo$4(A03AlquilerDaoTest.java:224)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarEliminacionConIdentificadorNulo -- Time elapsed: 0 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarEliminacionConIdentificadorNulo(A03AlquilerDaoTest.java:233)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.eliminar(AlquilerDao.java:30)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.lambda$verificarEliminacionConIdentificadorNulo$5(A03AlquilerDaoTest.java:234)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarIntervaloDeFechas -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.insertar(AlquilerDao.java:20)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarIntervaloDeFechas(A03AlquilerDaoTest.java:255)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarClienteRelacionado -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.insertar(AlquilerDao.java:20)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarClienteRelacionado(A03AlquilerDaoTest.java:271)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarEquipoRelacionado -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.insertar(AlquilerDao.java:20)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarEquipoRelacionado(A03AlquilerDaoTest.java:287)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarRelacionEquipoDevuelto -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.buscarPorId(AlquilerDao.java:15)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarRelacionEquipoDevuelto(A03AlquilerDaoTest.java:299)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarPersistenciaFechas -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.buscarPorId(AlquilerDao.java:15)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarPersistenciaFechas(A03AlquilerDaoTest.java:307)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarActualizacionConRelacionInvalida -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarActualizacionConRelacionInvalida(A03AlquilerDaoTest.java:330)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.actualizar(AlquilerDao.java:25)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.lambda$verificarActualizacionConRelacionInvalida$6(A03AlquilerDaoTest.java:331)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarInsercionConRelacionesInvalidas -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarInsercionConRelacionesInvalidas(A03AlquilerDaoTest.java:348)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.insertar(AlquilerDao.java:20)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.lambda$verificarInsercionConRelacionesInvalidas$7(A03AlquilerDaoTest.java:349)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarIndependenciaEliminacion -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.eliminar(AlquilerDao.java:30)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarIndependenciaEliminacion(A03AlquilerDaoTest.java:358)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarListadoEnNuevaSesion -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.listarTodos(AlquilerDao.java:11)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarListadoEnNuevaSesion(A03AlquilerDaoTest.java:368)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.A03AlquilerDaoTest.verificarIntegridadTrasInsercionRechazada -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.AlquilerDao.insertar(AlquilerDao.java:20)
+	at es.examen.sportrent.test.A03AlquilerDaoTest.verificarIntegridadTrasInsercionRechazada(A03AlquilerDaoTest.java:387)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

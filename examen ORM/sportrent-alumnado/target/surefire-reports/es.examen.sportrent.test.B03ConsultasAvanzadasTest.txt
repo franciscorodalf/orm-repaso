@@ -1,0 +1,215 @@
+-------------------------------------------------------------------------------
+Test set: es.examen.sportrent.test.B03ConsultasAvanzadasTest
+-------------------------------------------------------------------------------
+Tests run: 23, Failures: 3, Errors: 20, Skipped: 0, Time elapsed: 0.019 s <<< FAILURE! -- in es.examen.sportrent.test.B03ConsultasAvanzadasTest
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarResultadoClientesSuperanReferencia -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesSuperanReferencia(ClienteDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarResultadoClientesSuperanReferencia(B03ConsultasAvanzadasTest.java:29)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarOrdenacionClientesSuperanReferencia -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesSuperanReferencia(ClienteDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarOrdenacionClientesSuperanReferencia(B03ConsultasAvanzadasTest.java:38)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarImplementacionClientesSuperanReferencia -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesSuperanReferencia(ClienteDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarImplementacionClientesSuperanReferencia(B03ConsultasAvanzadasTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarResultadoVacioClientesSuperanReferencia -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarResultadoVacioClientesSuperanReferencia(B03ConsultasAvanzadasTest.java:57)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesSuperanReferencia(ClienteDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.lambda$verificarResultadoVacioClientesSuperanReferencia$0(B03ConsultasAvanzadasTest.java:58)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarSegundoClienteClientesSuperanReferencia -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesSuperanReferencia(ClienteDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarSegundoClienteClientesSuperanReferencia(B03ConsultasAvanzadasTest.java:68)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarCantidadPrimerClienteClientesSuperanReferencia -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesSuperanReferencia(ClienteDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarCantidadPrimerClienteClientesSuperanReferencia(B03ConsultasAvanzadasTest.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarCantidadSegundoClienteClientesSuperanReferencia -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesSuperanReferencia(ClienteDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarCantidadSegundoClienteClientesSuperanReferencia(B03ConsultasAvanzadasTest.java:87)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarReferenciaInexistenteClientesSuperanReferencia -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesSuperanReferencia(ClienteDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarReferenciaInexistenteClientesSuperanReferencia(B03ConsultasAvanzadasTest.java:98)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarReferenciaNulaClientesSuperanReferencia -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesSuperanReferencia(ClienteDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarReferenciaNulaClientesSuperanReferencia(B03ConsultasAvanzadasTest.java:106)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarReferenciaConUnAlquilerClientesSuperanReferencia -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesSuperanReferencia(ClienteDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarReferenciaConUnAlquilerClientesSuperanReferencia(B03ConsultasAvanzadasTest.java:114)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarReferenciaSinAlquileresClientesSuperanReferencia -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesSuperanReferencia(ClienteDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarReferenciaSinAlquileresClientesSuperanReferencia(B03ConsultasAvanzadasTest.java:122)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarReferenciaConMayorCantidadClientesSuperanReferencia -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.ClienteDao.clientesSuperanReferencia(ClienteDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarReferenciaConMayorCantidadClientesSuperanReferencia(B03ConsultasAvanzadasTest.java:130)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarResultadoEquiposSobreMediaCategoria -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.equiposSobreMediaCategoria(EquipoDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarResultadoEquiposSobreMediaCategoria(B03ConsultasAvanzadasTest.java:142)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarOrdenacionEquiposSobreMediaCategoria -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.equiposSobreMediaCategoria(EquipoDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarOrdenacionEquiposSobreMediaCategoria(B03ConsultasAvanzadasTest.java:151)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarImplementacionEquiposSobreMediaCategoria -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.equiposSobreMediaCategoria(EquipoDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarImplementacionEquiposSobreMediaCategoria(B03ConsultasAvanzadasTest.java:160)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarResultadoVacioEquiposSobreMediaCategoria -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarResultadoVacioEquiposSobreMediaCategoria(B03ConsultasAvanzadasTest.java:171)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.equiposSobreMediaCategoria(EquipoDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.lambda$verificarResultadoVacioEquiposSobreMediaCategoria$1(B03ConsultasAvanzadasTest.java:172)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarSegundoEquipoEquiposSobreMediaCategoria -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.equiposSobreMediaCategoria(EquipoDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarSegundoEquipoEquiposSobreMediaCategoria(B03ConsultasAvanzadasTest.java:182)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarTercerEquipoEquiposSobreMediaCategoria -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.equiposSobreMediaCategoria(EquipoDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarTercerEquipoEquiposSobreMediaCategoria(B03ConsultasAvanzadasTest.java:190)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarComparacionDePreciosEquiposSobreMediaCategoria -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.equiposSobreMediaCategoria(EquipoDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarComparacionDePreciosEquiposSobreMediaCategoria(B03ConsultasAvanzadasTest.java:198)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarCategoriaPrimerEquipoEquiposSobreMediaCategoria -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.equiposSobreMediaCategoria(EquipoDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarCategoriaPrimerEquipoEquiposSobreMediaCategoria(B03ConsultasAvanzadasTest.java:209)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarMediasInformadasEquiposSobreMediaCategoria -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.equiposSobreMediaCategoria(EquipoDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarMediasInformadasEquiposSobreMediaCategoria(B03ConsultasAvanzadasTest.java:217)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarPrecioPrimerEquipoEquiposSobreMediaCategoria -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.equiposSobreMediaCategoria(EquipoDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarPrecioPrimerEquipoEquiposSobreMediaCategoria(B03ConsultasAvanzadasTest.java:228)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarResultadoEstableEquiposSobreMediaCategoria -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.UnsupportedOperationException: No implementado
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3259)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.verificarResultadoEstableEquiposSobreMediaCategoria(B03ConsultasAvanzadasTest.java:242)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.UnsupportedOperationException: No implementado
+	at es.examen.sportrent.dao.EquipoDao.equiposSobreMediaCategoria(EquipoDao.java:37)
+	at es.examen.sportrent.test.B03ConsultasAvanzadasTest.lambda$verificarResultadoEstableEquiposSobreMediaCategoria$3(B03ConsultasAvanzadasTest.java:243)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
